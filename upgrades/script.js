@@ -19,5 +19,6 @@ function upgrade(){
   if(document.getElementById('employee').checked){
     total = total * .7;
   }
-  document.getElementById('finalPrice').innerHTML = "$" + total + ".00";
+  let scalar = parseFloat(document.getElementById('priceScale').value);
+  document.getElementById('finalPrice').innerHTML = "$" + (total * scalar * .01) + ".00";
 }
