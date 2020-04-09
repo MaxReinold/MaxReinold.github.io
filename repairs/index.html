@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Harris County Tow Repairs</title>
+    <style>
+      body {
+        font-size: 16px;
+      }
+      select {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+      <input type="checkbox" id="employee">Employee Discount?</input><br>
+      <label for="paintD">Paint Damage Level:</label>
+      <select id="paintD" name="paintD">
+        <option value="0">None</option>
+        <option value="300">Minor</option>
+        <option value="700">Major</option>
+      </select><br>
+      <label for="bodyD">Body Damage Level:</label>
+      <select id="bodyD" name="bodyD">
+        <option value="0">None</option>
+        <option value="700">Minor</option>
+        <option value="1150">Major</option>
+      </select>
+      <br>
+      <label for="engineD">Engine Damage Level:</label>
+      <select id="engineD" name="engineD">
+        <option value="0">None</option>
+        <option value="1150">Minor</option>
+        <option value="1250">Major</option>
+      </select>
+      <br>
+      <input type="checkbox" id="oil">Oil Change</input>
+      <br>
+      <input type="checkbox" id="window">Window Repair</input>
+      <br><br>
+      <input type="submit" onclick="repair()" style="margin-right: 10px">Price of repair: <span id="finalPrice"></span></input>
+
+    <script src="script.js"></script>
+  </body>
+</html>
