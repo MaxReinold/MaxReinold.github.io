@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Harris County Tow Upgrades</title>
+    <style>
+      body {
+        font-size: 16px;
+      }
+      select {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="employee">Employee Discount?</input><br>
+      <label for="engineLevel">Engine Level:</label>
+      <select id="engineLevel" name="engineLevel">
+        <option value="0">None</option>
+        <option value="2000">Stage 1</option>
+        <option value="4000">Stage 2</option>
+        <option value="6000">Stage 3</option>
+        <option value="8000">Stage 4</option>
+        <option value="10000">Stage 5</option>
+      </select><br>
+      <label for="brake">Brakes</label>
+      <select id="brake" name="brake">
+        <option value="0">None</option>
+        <option value="500">Level 1</option>
+        <option value="1000">Level 2</option>
+        <option value="1500">Level 3</option>
+        <option value="2000">Level 4</option>
+      </select><br>
+      <label for="transmission">Transmission</label>
+      <select id="transmission" name="transmission">
+        <option value="0">None</option>
+        <option value="1000">Level 1</option>
+        <option value="2000">Level 2</option>
+        <option value="3000">Level 3</option>
+        <option value="4000">Level 4</option>
+      </select><br>
+      <label for="suspension">Suspension</label>
+      <select id="suspension" name="suspension">
+        <option value="0">None</option>
+        <option value="250">Level 1</option>
+        <option value="500">Level 2</option>
+        <option value="750">Level 3</option>
+        <option value="1000">Level 4</option>
+        <option value="1250">Level 5</option>
+      </select><br>
+      <label for="wheels">Wheel Type</label>
+      <select id="wheels" name="wheels">
+        <option value="0">None</option>
+        <option value="750">Tuner</option>
+        <option value="1250">Low Rider</option>
+        <option value="1750">Muscle</option>
+        <option value="2000">Sports</option>
+        <option value="2000">SUV</option>
+        <option value="2000">Offroad</option>
+        <option value="3000">High End</option>
+      </select><!-- <br>
+      <label for="armor">Armor</label>
+      <select id="armor" name="armor">
+        <option value="0">None</option>
+        <option value="3000">20%</option>
+        <option value="6000">40%</option>
+        <option value="9000">60%</option>
+        <option value="12000">80%</option>
+        <option value="15000">100%</option>
+      </select> --><br>
+      <label for="paint">Paint</label>
+      <select id="paint" name="paint">
+        <option value="0">None</option>
+        <option value="1000">Classic</option>
+        <option value="3000">Metallic</option>
+        <option value="3500">Matte</option>
+        <option value="4000">Metals</option>
+        <option value="2000">Util</option>
+        <option value="1500">Worn</option>
+        <option value="3000">Pearlescent</option>
+      </select><br>
+      <input type="checkbox" id="turbo">Turbo</input><br>
+      <input type="checkbox" id="xenon">Xenon Headlights</input><br>
+      <input type="checkbox" id="live">Liverys</input><br>
+      <br><br>
+      <input type="submit" onclick="upgrade()" style="margin-right: 10px">Price of repair: <span id="finalPrice"></span></input>
+
+    <script src="script.js"></script>
+  </body>
+</html>
