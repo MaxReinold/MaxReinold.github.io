@@ -5,7 +5,7 @@ function upgrade(){
     parseInt(document.getElementById('transmission').value) +
     parseInt(document.getElementById('suspension').value) +
     parseInt(document.getElementById('wheels').value) +
-    parseInt(document.getElementById('armor').value) +
+    //parseInt(document.getElementById('armor').value) +
     parseInt(document.getElementById('paint').value);
   if(document.getElementById("turbo").checked){
     total += 10000;
