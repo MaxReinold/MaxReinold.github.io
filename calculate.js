@@ -9,6 +9,19 @@ let color = "red";
 let blackCount;
 let redCount;
 
+function copyCommand(){
+  copyToClipboard(document.getElementById('command').value);
+}
+
+function copyToClipboard(str) {
+  const el = document.createElement('textarea');
+  el.value = str;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+};
+
 function loln(){
   if(document.getElementById('lawOfLargeNumbers').checked){
     document.getElementById('black').checked = false;
