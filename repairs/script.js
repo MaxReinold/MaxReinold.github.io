@@ -14,5 +14,5 @@ function repair(){
       total = total * .7;
     }
     let scalar = parseFloat(document.getElementById('priceScale').value);
-    document.getElementById('finalPrice').innerHTML = "$" + (total * scalar * .01) + ".00";
+    document.getElementById('finalPrice').innerHTML = "$" + Math.floor(total * scalar * .01) + ".00";
 }
