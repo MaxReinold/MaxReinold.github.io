@@ -12,7 +12,10 @@ function repair(){
     }
     let scalar = parseFloat(document.getElementById('priceScale').value);
     if(parseFloat(document.getElementById('towMiles').value) > 0){
-      total += 1000 + Math.floor(parseFloat((document.getElementById('towMiles').value -1) * 100));
+      total += 1000;
+      if(parseFloat(document.getElementById('towMiles').value) > 1){
+        total += Math.floor(parseFloat((document.getElementById('towMiles').value -1))) * 100;
+      }
     }
     if(document.getElementById('employee').checked){
       total = total * .7;
