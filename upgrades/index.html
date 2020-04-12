@@ -14,37 +14,37 @@
   </head>
   <body>
     <input type="checkbox" id="employee">Employee Discount?</input><br>
-      <label for="engineLevel">Engine Level:</label>
+      <label for="engineLevel">Engine:
       <select id="engineLevel" name="engineLevel">
         <option value="0">None</option>
         <option value="9000">Stage 2</option>
         <option value="14000">Stage 3</option>
         <option value="17000">Stage 4</option>
         <option value="20000">Stage 5</option>
-      </select><br>
-      <label for="brake">Brakes</label>
+      </select></label><br>
+      <label for="brake">Brakes:
       <select id="brake" name="brake">
         <option value="0">None</option>
         <option value="1500">Level 2</option>
         <option value="2250">Level 3</option>
         <option value="3000">Level 4</option>
-      </select><br>
-      <label for="transmission">Transmission</label>
+      </select></label><br>
+      <label for="transmission">Transmission:
       <select id="transmission" name="transmission">
         <option value="0">None</option>
         <option value="3000">Level 2</option>
         <option value="4500">Level 3</option>
         <option value="6000">Level 4</option>
-      </select><br>
-      <label for="suspension">Suspension</label>
+      </select></label><br>
+      <label for="suspension">Suspension:
       <select id="suspension" name="suspension">
         <option value="0">None</option>
         <option value="1000">Level 2</option>
         <option value="1500">Level 3</option>
         <option value="2000">Level 4</option>
         <option value="2500">Level 5</option>
-      </select><br>
-      <label for="wheels">Wheel Type</label>
+      </select></label><br>
+      <label for="wheels">Wheel Type:
       <select id="wheels" name="wheels">
         <option value="0">None</option>
         <option value="750">Tuner</option>
@@ -54,7 +54,7 @@
         <option value="3000">SUV</option>
         <option value="3000">Offroad</option>
         <option value="4500">High End</option>
-      </select><!-- <br>
+      </select></label><!-- <br>
       <label for="armor">Armor</label>
       <select id="armor" name="armor">
         <option value="0">None</option>
@@ -64,7 +64,7 @@
         <option value="12000">80%</option>
         <option value="15000">100%</option>
       </select> --><br>
-      <label for="paint">Paint</label>
+      <label for="paint">Paint:
       <select id="paint" name="paint">
         <option value="0">None</option>
         <option value="1000">Classic</option>
@@ -74,15 +74,14 @@
         <option value="2000">Util</option>
         <option value="1500">Worn</option>
         <option value="3000">Pearlescent</option>
-      </select><br>
-      <input type="checkbox" id="turbo">Turbo</input><br>
-      <input type="checkbox" id="xenon">Xenon Headlights</input><br>
-      <input type="checkbox" id="live">Liverys</input><br>
+      </select></label><br>
+      <label><input type="checkbox" id="turbo">Turbo</input></label><br>
+      <label><input type="checkbox" id="xenon">Xenon Headlights</input></label><br>
+      <label><input type="checkbox" id="live">Liverys</input></label><br>
       <br><br>
       <input type="number" id="priceScale" value="100"> % Price Scalar</input>
       <br><br>
-      <input type="submit" onclick="upgrade()" style="margin-right: 10px">Price of upgrades: <span id="finalPrice"></span></input>
-
+      <input type="submit" onclick="upgrade()" style="margin-right: 10px">Price of upgrades: $<span id="finalPrice"> </span>
     <script src="script.js"></script>
   </body>
 </html>

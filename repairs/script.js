@@ -20,5 +20,5 @@ function repair(){
     if(document.getElementById('employee').checked){
       total = total * .7;
     }
-    document.getElementById('finalPrice').innerHTML = "$" + Math.floor(total * scalar * .01) + ".00";
+    document.getElementById('finalPrice').innerHTML = Math.floor(total * scalar * .01) + ".00";
 }

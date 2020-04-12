@@ -14,35 +14,35 @@
   </head>
   <body>
       <input type="checkbox" id="employee">Employee Discount?</input><br>
-      <label for="paintD">Paint Damage Level:</label>
+      <label for="paintD">Paint Damage:
       <select id="paintD" name="paintD">
         <option value="0">None</option>
         <option value="300">Minor</option>
         <option value="700">Major</option>
-      </select>
+      </select></label>
       <br>
-      <label for="bodyD">Body Damage Level:</label>
+      <label for="bodyD">Body Damage:
       <select id="bodyD" name="bodyD">
         <option value="0">None</option>
         <option value="700">Minor</option>
         <option value="1150">Major</option>
-      </select>
+      </select></label>
       <br>
-      <label for="engineD">Engine Damage Level:</label>
+      <label for="engineD">Engine Damage:
       <select id="engineD" name="engineD">
         <option value="0">None</option>
         <option value="1150">Minor</option>
         <option value="1250">Major</option>
-      </select>
+      </select></label>
       <br>
-      <input type="checkbox" id="oil">Oil Change</input>
+      <label for="oil"><input type="checkbox" id="oil">Oil Change</input></label>
       <br>
-      <input type="checkbox" id="window">Window Repair</input>
+      <label for="window"><input type="checkbox" id="window">Window Repair</input></label>
       <br><br>
       <input type="number" id="priceScale" value="100"> % Price Scalar</input><br>
-      <input type="number" value="0" id="towMiles"> Tow miles drivin </input>
+      <input type="number" value="0" id="towMiles"> Tow miles driven </input>
       <br><br>
-      <input type="submit" onclick="repair()" style="margin-right: 10px">Price of repair: <span id="finalPrice"></span></input>
+      <input type="submit" onclick="repair()" style="margin-right: 10px">Price of Repair: $<span id="finalPrice"> </span>
 
     <script src="script.js"></script>
   </body>
