@@ -111,7 +111,7 @@ function generateReceipt(amount, items){
   <br><p style="line-height:30px; text-align: center">SALE</p>
   <p><span style="float:left">AMOUNT</span><span style="float:right">$${amount}</span></p><br>
   <p><span style="float:left">TAX</span><span style="float:right">$0</span></p><br>
-  <p><span style="float:left">TOTAL</span><span style="float:right">$${amount + Math.floor(amount * .07 * 100)/100}</span></p><br><br>
+  <p><span style="float:left">TOTAL</span><span style="float:right">$${amount}</span></p><br><br>
   <p>Payment:</p>
   <p>AUTH # ${itemNumber}</p>
   <p>APPROVED</p><br><br>
