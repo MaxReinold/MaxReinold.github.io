@@ -60,10 +60,11 @@ function getData(){
   }
   items = items.filter(() => true);
   items = items.filter(x => x !== undefined);
-  if(typeof(parseFloat(iframe.getElementById("finalPrice").innerText)) == "number"){
+  if(typeof(parseFloat(iframe.getElementById("finalPrice").innerText)) == "number" &&
+        !isNaN(parseFloat(iframe.getElementById("finalPrice").innerText))){
     cost = parseFloat(iframe.getElementById("finalPrice").innerText);
   } else {
-    console.log("Error: final price not found");
+    cost = 0;
   }
   // for(let i = 0; i < items.length; i++){
   //   if(items[i] == null){

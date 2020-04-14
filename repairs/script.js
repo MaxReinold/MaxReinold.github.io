@@ -1,5 +1,5 @@
 let total = 0;
-function repair(){
+function getPrice(){
     total =
     parseInt(document.getElementById('paintD').value) +
     parseInt(document.getElementById('bodyD').value) +

@@ -1,4 +1,4 @@
-function upgrade(){
+function getPrice(){
   let total =
     parseInt(document.getElementById('engineLevel').value) +
     parseInt(document.getElementById('brake').value) +
