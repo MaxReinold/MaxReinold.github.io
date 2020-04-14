@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(100, 100, 100);
+}
+#formbody {
+  border: 2px solid black;
+  width: 300px;
+  height: 130px;
+  padding: 10px;
+  margin: 30px;
+}
+ #formbody input{
+   margin: 5px;
+ }

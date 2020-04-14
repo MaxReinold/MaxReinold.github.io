@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Car Sales</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <a href="/../index.html">Back to towing tools</a>
+    <div id="formbody">
+      <input type="text" id="carname" placeholder="Car Name*"> Car Name</input>
+      <input type="text" id="carprice" placeholder="Car Price*"> Car Price</input>
+      <input type="text" id="seller" value="Default Seller"> Seller's Name</input>
+      <input type="text" id="buyer" value="Default Buyer"> Buyer's Name</input>
+    </div>
+    <p style="color: red" id="error"></p>
+    <button type="button" onclick="getReceipt()">Generate Receipt</button><br><br>
+    <div id="receipt-display" style="width: 350px; float:right"></div>
+    <div id="receipt-image" style="width: 350px; float:right"></div>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="/../html2canvas.js"></script>
+  </body>
+</html>
