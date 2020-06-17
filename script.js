@@ -1,5 +1,5 @@
-let muteSearchByID = ["https://sb.celestialnetwork.net/index.php?p=commslist&searchText=", "&Submit#content"]
-let banSearchByID = ["https://sb.celestialnetwork.net/index.php?p=banlist&searchText=", "&Submit#content"]
+let muteSearchByID = ["http://sb.celestialnetwork.net/index.php?p=commslist&searchText=", "&Submit#content"]
+let banSearchByID = ["http://sb.celestialnetwork.net/index.php?p=banlist&searchText=", "&Submit#content"]
 let playerStatSearchById = ["https://cn.gameme.com/search?q=", "&si=uniqueid&rc=all&x=22&y=11"]
 let steamRepSec = ["https://steamrep.com/search?q="]
 let banPage = document.createElement("IFRAME");
