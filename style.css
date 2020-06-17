@@ -2,8 +2,23 @@
   margin-top: 15px;
 }
 
+iframe {
+  height: 500px;
+  width: 80%;
+}
+
+#sb {
+  display: inline-block;
+  width: 100%;
+}
+
+#sb iframe {
+  width: 49%;
+}
+
 body {
-  text-align: center
+  text-align: center;
+  background-color: gray;
 }
 
 .buttons {

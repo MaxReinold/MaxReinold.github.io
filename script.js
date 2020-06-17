@@ -33,11 +33,9 @@ function searchBtnClick(){
 }
 
 function bansLoaded(){
-  document.getElementById("banButton").style.display = "block";
 }
 
 function mutesLoaded(){
-  document.getElementById("muteButton").style.display = "block";
 }
 
 function statsLoaded(){
@@ -50,32 +48,24 @@ function steamRepLoaded(){
 
 function searchSteamRep(id){
   steamRepPage.src = steamRepSec[0] + id
-  steamRepPage.width = "80%";
-  steamRepPage.height = "500px";
   steamRepPage.onload = steamRepLoaded
   document.getElementById('steamRepSec').appendChild(steamRepPage);
 }
 
 function searchBan(id){
   banPage.src = banSearchByID[0] + id + banSearchByID[1] + "";
-  banPage.width = "80%";
-  banPage.height = "500px";
   banPage.onload = bansLoaded
-  document.getElementById('banSec').appendChild(banPage);
+  document.getElementById('sb').appendChild(banPage);
 }
 
 function searchMute(id){
   mutePage.src = muteSearchByID[0] + id + muteSearchByID[1] + "";
-  mutePage.width = "80%";
-  mutePage.height = "500px";
   mutePage.onload = mutesLoaded
-  document.getElementById('muteSec').appendChild(mutePage);
+  document.getElementById('sb').appendChild(mutePage);
 }
 
 function searchStats(id){
   statPage.src = playerStatSearchById[0] + id + playerStatSearchById[1] + "";
-  statPage.width = "80%";
-  statPage.height = "500px";
   statPage.onload = statsLoaded
   document.getElementById('statSec').appendChild(statPage);
 }
