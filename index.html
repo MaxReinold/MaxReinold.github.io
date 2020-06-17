@@ -2,25 +2,29 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Mechanic Shop</title>
-    <style>
-      body{
-        background-color: rgb(100, 100, 100);
-      }
-    </style>
+    <title>Search Multiple Websites</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Harris County Towing Tools</h1>
-    <p><a href="carsales/index.html">Car Sales Form</a></p>
-    <div id="receipt-display" style="width: 350px; float:right"></div>
-    <div id="receipt-image" style="width: 350px; float:right"></div>
-    <iframe src="upgrades/index.html" width="400" height="400" id="display"></iframe><br>
-    <button id="aButton" onclick="swap()">Repairs</button>
-    <!-- <button id="upgradetype" onclick="swapType()" style="visibility: visible;">Used / Scrap Parts</button> --><br><br>
-    <button onclick="generateAReceipt()">Generate Receipt</button><br><br>
+    <h1>Multi-Search POC</h1>
+    <form class="mainSearchForm" action="index.html" method="post">
+      <label for="Search">Search Query: </label>
+      <input type="text" name="Search" id="searchQuery" placeholder="Use steam id to search SteamRep" size="25">
+      <button type="button" name="button" onclick="searchBtnClick()">Search</button>
+    </form>
+    <div id="searchWindows">
+      <button class="buttons" onclick="toggleBan()" id="banButton">Bans</button>
+      <div class="windows" id="banSec"></div>
 
+      <button class="buttons" onclick="toggleMute()" id="muteButton">Mutes</button>
+      <div class="windows" id="muteSec"></div>
 
-    <script type="text/javascript" src="html2canvas.js"></script>
+      <button class="buttons" onclick="toggleStat()" id="statButton">Stats</button>
+      <div class="windows" id="statSec"></div>
+
+      <button class="buttons" onclick="toggleSteamRep()" id="steamRepButton">Steam Rep</button>
+      <div class="windows" id="steamRepSec"></div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

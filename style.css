@@ -1,0 +1,15 @@
+.mainSearchForm {
+  margin-top: 15px;
+}
+
+body {
+  text-align: center
+}
+
+.buttons {
+  display: none;
+}
+
+.windows {
+  display: none;
+}
