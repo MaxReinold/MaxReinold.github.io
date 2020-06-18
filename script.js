@@ -33,19 +33,19 @@ function searchBtnClick(){
 }
 
 function bansLoaded(){
-  document.getElementById("banButton").style.display = "block";
+  document.getElementById("banButton").style.display = "inline-block";
 }
 
 function mutesLoaded(){
-  document.getElementById("muteButton").style.display = "block";
+  document.getElementById("muteButton").style.display = "inline-block";
 }
 
 function statsLoaded(){
-  document.getElementById("statButton").style.display = "block";
+  document.getElementById("statButton").style.display = "inline-block";
 }
 
 function steamRepLoaded(){
-  document.getElementById("steamRepButton").style.display = "block";
+  document.getElementById("steamRepButton").style.display = "inline-block";
 }
 
 function searchSteamRep(id){
