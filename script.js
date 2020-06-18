@@ -8,6 +8,8 @@ let statPage = document.createElement("IFRAME");
 let steamRepPage = document.createElement("IFRAME");
 let banLink = document.getElementById("banLink");
 let muteLink = document.getElementById("muteLink");
+let statLink = document.getElementById("statLink");
+let steamRepLink = document.getElementById("steamRepLink");
 
 function resetAll(){
   banPage.src = "";
@@ -52,6 +54,7 @@ function steamRepLoaded(){
 
 function searchSteamRep(id){
   steamRepPage.src = steamRepSec[0] + id
+  steamRepLink.href = steamRepPage.src;
   steamRepPage.width = "80%";
   steamRepPage.height = "500px";
   steamRepPage.onload = steamRepLoaded
@@ -78,6 +81,7 @@ function searchMute(id){
 
 function searchStats(id){
   statPage.src = playerStatSearchById[0] + id + playerStatSearchById[1] + "";
+  statLink.href = statPage.src;
   statPage.width = "80%";
   statPage.height = "500px";
   statPage.onload = statsLoaded
