@@ -6,6 +6,8 @@ let banPage = document.createElement("IFRAME");
 let mutePage = document.createElement("IFRAME");
 let statPage = document.createElement("IFRAME");
 let steamRepPage = document.createElement("IFRAME");
+let banLink = document.getElementById("banLink");
+let muteLink = document.getElementById("muteLink");
 
 function resetAll(){
   banPage.src = "";
@@ -58,6 +60,7 @@ function searchSteamRep(id){
 
 function searchBan(id){
   banPage.src = banSearchByID[0] + id + banSearchByID[1] + "";
+  banLink.href = banPage.src;
   banPage.width = "80%";
   banPage.height = "500px";
   banPage.onload = bansLoaded
@@ -66,6 +69,7 @@ function searchBan(id){
 
 function searchMute(id){
   mutePage.src = muteSearchByID[0] + id + muteSearchByID[1] + "";
+  muteLink.href = mutePage.src;
   mutePage.width = "80%";
   mutePage.height = "500px";
   mutePage.onload = mutesLoaded
