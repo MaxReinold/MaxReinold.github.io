@@ -6,21 +6,27 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Player Investigation Tool</h1>
-    <form class="mainSearchForm" action="index.html" method="post">
-      <label for="Search">Search Query: </label>
-      <input type="text" name="Search" id="searchQuery" placeholder="Use steam id to search SteamRep" size="25">
-      <button type="button" name="button" onclick="searchBtnClick()">Search</button>
-    </form>
-    <div id="searchWindows">
-      <button class="buttons" onclick="toggleBan()" id="banButton">Bans</button>
-      <button class="buttons" onclick="toggleMute()" id="muteButton">Mutes</button>
-      <button class="buttons" onclick="toggleStat()" id="statButton">Stats</button>
-      <button class="buttons" onclick="toggleSteamRep()" id="steamRepButton">Steam Rep</button>
-      <div class="windows" id="steamRepSec"><p><a href="" id="steamRepLink" target="_blank">Steam Rep Page</a></p></div>
-      <div class="windows" id="statSec"><p><a href="" id="statLink" target="_blank">Player Stats</a></p></div>
-      <div class="windows" id="muteSec"><p><a href="" id="muteLink" target="_blank">Player Mutes</a></p></div>
-      <div class="windows" id="banSec"><p><a href="" id="banLink" target="_blank">Player Bans</a></p></div>
+    <div id="content">
+      <div id="titleSection">
+        <h1>Player Investigation Tool</h1>
+      </div>
+      <div id="searchSection">
+        <form class="mainSearchForm" action="index.html" method="post">
+          <label for="Search">Search Query: </label>
+          <input type="text" name="Search" id="searchQuery" placeholder="Use steam id to search SteamRep" size="25">
+          <button type="button" name="button" onclick="searchBtnClick()">Search</button>
+        </form>
+      </div>
+      <div id="searchWindows">
+        <button class="buttons" onclick="toggleBan()" id="banButton">Bans</button>
+        <button class="buttons" onclick="toggleMute()" id="muteButton">Mutes</button>
+        <button class="buttons" onclick="toggleStat()" id="statButton">Stats</button>
+        <button class="buttons" onclick="toggleSteamRep()" id="steamRepButton">Steam Rep</button>
+        <div class="windows" id="steamRepSec"><p><a href="" id="steamRepLink" target="_blank">Steam Rep Page</a></p></div>
+        <div class="windows" id="statSec"><p><a href="" id="statLink" target="_blank">Player Stats</a></p></div>
+        <div class="windows" id="muteSec"><p><a href="" id="muteLink" target="_blank">Player Mutes</a></p></div>
+        <div class="windows" id="banSec"><p><a href="" id="banLink" target="_blank">Player Bans</a></p></div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

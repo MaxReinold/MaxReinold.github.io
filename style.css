@@ -1,9 +1,19 @@
+
 .mainSearchForm {
   margin-top: 15px;
 }
 
+#content {
+  width: 90%;
+  border-radius: 15px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
 body {
-  text-align: center
+  text-align: center;
+  background-color: #101010;
+  color: white;
 }
 
 .buttons {
@@ -17,4 +27,9 @@ body {
 
 a {
   text-decoration: none;
+}
+
+#titleSection {
+  background-color: #040404;
+  color: white;
 }
