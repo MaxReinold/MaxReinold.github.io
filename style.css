@@ -1,43 +1,6 @@
-
-.mainSearchForm {
-  margin-top: 15px;
-}
-
-#content {
-  width: 90%;
-  border-radius: 15px;
-  border: 1px solid black;
-  display: inline-block;
-  background-color: #202020;
-  padding-bottom: 10px;
-}
-
 body {
-  text-align: center;
-  background-color: #101010;
-  color: white;
+  background-color: black
 }
-
-.buttons {
-  display: none;
-  margin-top: 5px
-}
-
-.windows {
-  display: none;
-}
-
-a {
-  text-decoration: none;
-  text-color: blue;
-}
-
-a:visited {
-  text-decoration: none;
-  text-color: blue;
-}
-
-#titleSection {
-  background-color: #101010;
-  color: white;
+canvas {
+  margin:-10px;
 }

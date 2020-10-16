@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>Player Investigation Tool</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js" integrity="sha512-rMaqGbYalDaQz0lWNF2L8DHPtf4NW+gSZomExS0LcsNyRS4Rmj21+dt97XfXCZE/E569eX72Bh//Jt1EpStgiA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+      <title>Bouncy Keys</title>
   </head>
   <body>
-    <div id="content">
-      <div id="titleSection">
-        <h1>Player Investigation Tool</h1>
-      </div>
-      <div id="searchSection">
-        <form class="mainSearchForm" action="index.html" method="post">
-          <label for="Search">Search Query: </label>
-          <input type="text" name="Search" id="searchQuery" placeholder="Use steam id to search SteamRep" size="25">
-          <button type="button" name="button" onclick="searchBtnClick()">Search</button>
-        </form>
-      </div>
-      <div id="searchWindows">
-        <button class="buttons" onclick="toggleBan()" id="banButton">Bans</button>
-        <button class="buttons" onclick="toggleMute()" id="muteButton">Mutes</button>
-        <button class="buttons" onclick="toggleStat()" id="statButton">Stats</button>
-        <button class="buttons" onclick="toggleSteamRep()" id="steamRepButton">Steam Rep</button>
-        <div class="windows" id="steamRepSec"><p><a href="" id="steamRepLink" target="_blank">Steam Rep Page</a></p></div>
-        <div class="windows" id="statSec"><p><a href="" id="statLink" target="_blank">Player Stats</a></p></div>
-        <div class="windows" id="muteSec"><p><a href="" id="muteLink" target="_blank">Player Mutes</a></p></div>
-        <div class="windows" id="banSec"><p><a href="" id="banLink" target="_blank">Player Bans</a></p></div>
-      </div>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>
