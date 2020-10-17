@@ -1,7 +1,7 @@
 let chars = [];
 
 //Customizable Parameters
-let keyWidth = 108;
+let keyWidth;
 let keyPadding = 10;
 
 function setup() {
@@ -9,6 +9,7 @@ function setup() {
   background(0);
   fill(255);
   textSize(32)
+  keyWidth = (windowWidth - (keyPadding * 2)) / 12.3
 }
 function draw() {
   background(0);
@@ -70,8 +71,7 @@ let keys = {
 }
 
 function getRandomKey() {
-  let ks = Object.entries(keys);
-  return ks[random(0, ks.length)][0];
+  return Object.entries(keys)[floor(random(0, Object.entries(keys).length))][0];
 }
 
 function keyPressed() {
