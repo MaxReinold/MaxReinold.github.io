@@ -1,8 +1,11 @@
 let chars = [];
+let constantRainbow = false;
+let rainbowHue = 0;
 
 //Customizable Parameters
 let keyWidth;
 let keyPadding = 10;
+let myHue = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -10,7 +13,10 @@ function setup() {
   fill(255);
   textSize(32)
   keyWidth = (windowWidth - (keyPadding * 2)) / 12.3
+  colorMode(HSB, 100);
+  fill(0, 100, 100);
 }
+
 function draw() {
   background(0);
   for (let i = 0; i < chars.length; i++) {
@@ -75,8 +81,22 @@ function getRandomKey() {
 }
 
 function keyPressed() {
+  if (key == " ") {
+    if (myHue < 100)
+      myHue += 10;
+    else myHue = 0;
+  }
   if (key.length == 1) {
-    chars.push(new CharObject(key))
+    if (constantRainbow) {
+      chars.push(new CharObject(key, rainbowHue));
+      if (rainbowHue <= 100)
+        rainbowHue++;
+      else rainbowHue = 0;
+    }
+    else {
+      chars.push(new CharObject(key, myHue));
+    }
+
   }
 }
 
@@ -85,19 +105,21 @@ function mouseClicked() {
 }
 
 class CharObject {
-  constructor(character) {
+  constructor(character, myHue) {
     this.char = character;
     this.velocity = createVector(random(-4, 4), random(-12, -7));
     let x = keyPadding + keys[this.char] * keyWidth;
     this.position = createVector(x, windowHeight);
+    this.myHue = myHue;
   }
 
   update() {
     this.position.add(this.velocity);
-    this.velocity.add(0, .25);
+    this.velocity.add(0, .05);
   }
 
   draw() {
+    fill(this.myHue, 100, 100);
     text(this.char, this.position.x, this.position.y);
   }
 
