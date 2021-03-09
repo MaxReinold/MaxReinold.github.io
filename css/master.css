@@ -82,6 +82,17 @@ body {
     padding: 2vw
 }
 
+.contact-container {
+    margin-top: 25px;
+    border-radius: 15px;
+    width: 30vw;
+    margin-left: 33vw;
+    background-color: var(--theme-body-background);
+    color: var(--theme-text);
+    padding: 2vw;
+    text-align: center;
+}
+
 .card-container {
     display:flex;
     flex-wrap: wrap;
@@ -119,4 +130,14 @@ body {
 
 .card .caption {
     padding: 10px;
+}
+
+.advanced::marker {
+    color: lawngreen;
+    font-size: 20px;
+}
+
+.intermediate::marker {
+    color: yellow;
+    font-size: 20px;
 }
