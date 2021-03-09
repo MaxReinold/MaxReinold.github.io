@@ -27,6 +27,7 @@
 
 body {
     margin: 0;
+    margin-bottom: 25px;
     background-color: var(--theme-background);
     font-family: 'Open Sans', sans-serif;
 }
