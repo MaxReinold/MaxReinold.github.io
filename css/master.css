@@ -108,10 +108,14 @@ a {
     margin-left: 10vw;
 }
 
+.project_heading {
+  margin-left: 10vw;
+}
+
 .card {
     background-color: var(--theme-card-background);
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     border-radius: 2px;
     margin: 25px;
     color: var(--theme-text);
