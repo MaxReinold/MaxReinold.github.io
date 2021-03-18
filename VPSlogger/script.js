@@ -12,7 +12,7 @@ function toggleVpsOn() {
     loggedOn = true;
   }
   fetch(
-  'https://discord.com/api/webhooks/821877690251739136/dRYegfYzpph1MGMMl2edkclK2uWvv3GJYEU_KuDMJBI4b_jSob6dSKmvuMfccTCw3a56',
+  'https://discord.com/api/webhooks/822153402984300594/7WTT3iOFsaA2_Q7AAWwIWkZCbPyZ6yapNkuNNUyzOLw4RiyN4bzgF8PKhLNWJiy8fHvm',
   {
     method: 'post',
     headers: {
