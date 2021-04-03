@@ -2,7 +2,7 @@ let loggedOn = false;
 
 
 let a;
-fetch('https://api.ipify.org?format=json').then(res => console.log(a = res.json())
+fetch('https://api.ipify.org?format=json').then(res => console.log(a = res.json()))
 console.log(a);
 // function sendToDiscord(mes) {
 //   let name = document.getElementById('name').value;
