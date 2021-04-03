@@ -1,8 +1,9 @@
 let loggedOn = false;
 
 
-
-fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => sendToDiscord(data))
+let a;
+fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => a = data)
+console.log(a);
 function sendToDiscord(mes) {
   let name = document.getElementById('name').value;
 
