@@ -92,7 +92,7 @@ a {
     margin-top: 25px;
     border-radius: 15px;
     width: 30vw;
-    margin-left: 33vw;
+    min-width: 250px;
     background-color: var(--theme-body-background);
     color: var(--theme-text);
     padding: 2vw;
@@ -154,4 +154,32 @@ a {
 .intermediate::marker {
     color: yellow;
     font-size: 20px;
+}
+
+.center-content {
+  display:flex;
+  justify-content: center;
+}
+
+.dynamic-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width:822px) {
+  .dynamic-container {
+    flex-wrap: nowrap;
+  }
+  .subsection{
+    width:30%;
+  }
+}
+
+@media screen and (max-width:822px) {
+    .dynamic-container {
+      flex-wrap: wrap;
+    }
+    .subsection{
+      width:100%;
+    }
 }

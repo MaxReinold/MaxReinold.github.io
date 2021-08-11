@@ -1,13 +1,28 @@
-.lights-btn {
-    position: absolute;
-    width: 35px;
-    height: 17.5px;
-    background-color: white;
-    border: 1px solid black;
-    top: 20px;
-    right: 10px;
-    border-radius: 9px;
-    transition: all 0.7s;
+@media screen and (min-width:600px) {
+  .lights-btn {
+      position: absolute;
+      width: 35px;
+      height: 17.5px;
+      background-color: white;
+      border: 1px solid black;
+      top: 20px;
+      right: 10px;
+      border-radius: 9px;
+      transition: all 0.7s;
+  }
+}
+@media screen and (max-width:600px){
+  .lights-btn {
+      position: absolute;
+      width: 35px;
+      height: 17.5px;
+      background-color: white;
+      border: 1px solid black;
+      top: 90px;
+      right: 10px;
+      border-radius: 9px;
+      transition: all 0.7s;
+  }
 }
 
 .lights-btn .circle {
