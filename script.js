@@ -33,7 +33,7 @@ data['bio'] = `Just an Immortal Valorant player who likes making people happy :)
 
 bioContainer.innerHTML = data['bio'];
 
-data['cards'].forEach(element => {
+function CreateSocialCard(element) {
     let tempContainer = document.createElement('a');
     tempContainer.classList.add("card");
     tempContainer.href=element.url
@@ -45,4 +45,8 @@ data['cards'].forEach(element => {
         <img class="linkarrow" src="Graphics/right3.png">
     `;
     cardContainer.appendChild(tempContainer);
+}
+
+data['cards'].forEach(element => {
+    CreateSocialCard(element);
 })
