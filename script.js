@@ -37,6 +37,7 @@ data['cards'].forEach(element => {
     let tempContainer = document.createElement('a');
     tempContainer.classList.add("card");
     tempContainer.href=element.url
+    tempContainer.target = "_blank"
     tempContainer.innerHTML = `
         <img class="icon" src="${element.iconSrc}">
         <div class="name">${element.name}</div>
