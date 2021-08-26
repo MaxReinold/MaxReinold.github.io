@@ -18,7 +18,7 @@ data['cards'] = [
     {
         'iconSrc':'https://cdx.solo.to/images/link/youtube.svg',
         'name':'Youtube',
-        'url':'https://www.youtube.com/channel/UCf7Gpr3OfBhR3yD8Z8KUZsQ',
+        'url':'https://bit.ly/StealthSVYT',
         'desc': "Subscribe to my YouTube, no videos yet though :("
     },
     {
