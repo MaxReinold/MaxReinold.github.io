@@ -12,7 +12,22 @@
         <link rel="shortcut icon" type="image/x-icon" href="Graphics/icon.ico">
 
         <title>StealthSV</title>
+        <style>
+			body { margin: 0; }
 
+			#controls {
+				position: absolute;
+				background-color: #1a1625;
+				opacity: 0.9;
+				border-radius: 5px;
+				border: 1.5px solid white;
+				color: #b4aecd;
+				padding: 5px;
+                top: 5px;
+                left: 5px;
+			}
+
+		</style>
     </head>
 
     <body>
@@ -38,6 +53,99 @@
             <hr>
             <div>Website Created by StealthSV (Charles Reinold)</div>
         </div>
+        <div id="background">
+
+        </div>
+        <div id="controls">
+			<table>
+				<tr>
+					<td><label for="magnitude">Magnitude:</label></td>
+					<td><input id="magnitude" type="range" min=0.1 max=10 step=0.1 value=10></td>
+				</tr>
+				<tr>
+					<td><label for="waveLength">Wave Length:</label></td>
+					<td><input id="waveLength" type="range" min=0.1 max=10 step=0.1 value=5></td>
+				</tr>
+                <tr>
+					<td><label for="waveSpeed">Wave Speed:</label></td>
+					<td><input id="waveSpeed" type="range" min=0 max=10 step=0.1 value=5></td>
+				</tr>
+			</table>
+		</div>
+		<script type="module">
+			import * as THREE from 'https://cdn.skypack.dev/three@v0.133.1';
+			import { OrbitControls } from 'https://cdn.skypack.dev/three@v0.133.1/examples/jsm/controls/OrbitControls.js';
+			const renderer = new THREE.WebGLRenderer();
+			let magnitude = 10;
+			let waveLength = 1/5;
+            let waveSpeed = 0.5;
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.querySelector("#background").appendChild( renderer.domElement );
+
+			document.querySelector("#magnitude").addEventListener("change", magChanged);
+			document.querySelector("#waveLength").addEventListener("change", lenChanged);
+			document.querySelector("#waveSpeed").addEventListener("change", speedChanged);
+
+			function magChanged(){
+				magnitude = document.querySelector("#magnitude").value;
+			}
+
+			function lenChanged(){
+				waveLength = 1/document.querySelector("#waveLength").value;
+			}
+
+            function speedChanged() {
+                waveSpeed = document.querySelector("#waveSpeed").value;
+            }
+			const scene = new THREE.Scene();
+
+			const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+
+			const controls = new OrbitControls( camera, renderer.domElement );
+
+			//controls.update() must be called after any manual changes to the camera's transform
+			camera.position.set( 0, 0, 50);
+			controls.update();
+			const geometry = new THREE.BufferGeometry();
+			const vertices = new Float32Array( [
+				-0.0, -0.0,  0.0,
+			] );
+			geometry.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
+			const material = new THREE.PointsMaterial( { color: 0xb4aecd });
+			let cubes = [];
+			for(let x = 0; x < 100; x++){
+				cubes.push([]);
+				for(let y = 0; y < 100; y++){
+					cubes[x].push(new THREE.Points(geometry,  material));
+				}
+			}
+			for(let x = 0; x < 100; x++){
+				for(let y = 0; y < 100; y++){
+					scene.add(cubes[x][y]);
+					cubes[x][y].position.x = (x - 50);
+					cubes[x][y].position.y = (y - 50);
+				}
+			}
+			let theta = 0;
+			let newPosition = (modifier)=>{
+				return Math.sin(theta+modifier);
+			}
+			const animate = function () {
+				requestAnimationFrame( animate );
+
+				for(let x = 0; x < 100; x++){
+					for(let y = 0; y < 100; y++){
+						cubes[x][y].position.z = (newPosition((x + y)*waveLength))*magnitude;
+					}
+				}
+
+				theta+= Math.PI*waveSpeed/180;
+				renderer.render( scene, camera );
+			};
+
+			animate();
+			
+		</script>
     </body>
 
 </html>

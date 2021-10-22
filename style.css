@@ -11,8 +11,12 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: rgb(254, 254, 255);
-    background-image: url(Graphics/backdrop.png);
+    /* background-image: url(Graphics/backdrop.png); */
     background-size: cover;
+}
+canvas {
+    width: 100%!important;
+    height: 100%!important;
 }
 
 .card {
@@ -148,4 +152,14 @@ body {
     color: rgb(105, 105, 105);
     text-align: center;
     width: 25em;
+}
+
+#background {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
