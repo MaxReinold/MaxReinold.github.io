@@ -75,6 +75,7 @@
 		<script type="module">
 			import * as THREE from 'https://cdn.skypack.dev/three@v0.133.1';
 			import { OrbitControls } from 'https://cdn.skypack.dev/three@v0.133.1/examples/jsm/controls/OrbitControls.js';
+			const loader = new THREE.TextureLoader();
 			const renderer = new THREE.WebGLRenderer();
 			let magnitude = 2;
 			let waveLength = 1/5;
@@ -111,8 +112,14 @@
 				-0.0, -0.0,  0.0,
 			] );
 			geometry.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
-			const material = new THREE.PointsMaterial( { color: 0xb4aecd });
-			let cubes = [];
+			loader.load('Graphics/circle.png', (texture) =>{
+					const material = new THREE.PointsMaterial( { 
+					color: 0xb4aecd ,
+					size: 0.75,
+					map: texture,
+					opacity: 1.0
+				});
+				let cubes = [];
 			for(let x = 0; x < 200; x++){
 				cubes.push([]);
 				for(let y = 0; y < 100; y++){
@@ -144,6 +151,7 @@
 			};
 
 			animate();
+			})
 			
 		</script>
     </body>
