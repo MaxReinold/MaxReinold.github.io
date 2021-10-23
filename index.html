@@ -70,6 +70,13 @@
 					<td><label for="waveSpeed">Wave Speed:</label></td>
 					<td><input id="waveSpeed" type="range" min=-5 max=5 step=0.1 value=-1.5></td>
 				</tr>
+				<tr>
+					<td>Free Control:</td>
+					<td><label class="switch">
+						<input type="checkbox" id="fineControl">
+						<span class="slider round"></span>
+					  </label></td>
+				</tr>
 			</table>
 		</div>
 		<script type="module">
@@ -86,6 +93,15 @@
 			document.querySelector("#magnitude").addEventListener("change", magChanged);
 			document.querySelector("#waveLength").addEventListener("change", lenChanged);
 			document.querySelector("#waveSpeed").addEventListener("change", speedChanged);
+			document.querySelector("#fineControl").addEventListener("change", fineChanged);
+
+			function fineChanged(){
+				if(document.querySelector("#fineControl").checked){
+					document.querySelector("#background").style.zIndex = "10";
+				} else {
+					document.querySelector("#background").style.zIndex = "-2";
+				}
+			}
 
 			function magChanged(){
 				magnitude = document.querySelector("#magnitude").value;
