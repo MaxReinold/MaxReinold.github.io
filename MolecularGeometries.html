@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molecular Geometries</title>
+    <style>
+        th,td {
+            padding: 10px;
+            padding-inline: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <label for="bondedGroups">Bonded Groups: </label>
+    <input type="number" id="bondedGroups" onchange="bondedChange()" min="2" max="6"><br/>
+    <label for="lonePairs">Lone Pairs: </label>
+    <input type="number" id="lonePairs" onchange="loneChange()" min="0" max="3">
+    <table>
+        <tr>
+            <th>Bonded Groups</th>
+            <th>Lone Pairs</th>
+            <th>Electron Geometry</th>
+            <th>Molecular Geometry</th>
+            <th>Bond Angles</th>
+        </tr>
+    </table>
+
+    <script>
+        class GeometryGroup {
+            static Groups = [];
+            constructor(bondedGroups, lonePairs, electronGeometry, molecularGeometry, bondAngles){
+                this.bondedGroups = bondedGroups;
+                this.lonePairs = lonePairs;
+                this.electronGeometry = electronGeometry;
+                this.molecularGeometry = molecularGeometry;
+                this.bondAngles = bondAngles;
+                this.displayHtml = this.generateHtml();
+                GeometryGroup.Groups.push(this);
+            }
+
+            generateHtml(){
+                let html = `<tr>
+                                <td>${this.bondedGroups}</td>
+                                <td>${this.lonePairs}</td>
+                                <td>${this.electronGeometry}</td>
+                                <td>${this.molecularGeometry}</td>
+                                <td>${this.bondAngles}</td>
+                            </tr>`;
+                return html;
+            }
+        }
+        new GeometryGroup("2", "0", "Linear", "Linear", "180");
+        new GeometryGroup("3", "0", "Trigonal Planar", "Trigonal Planar", "120");
+        new GeometryGroup("2", "1", "Trigonal Planar", "Bent", "<120");
+        new GeometryGroup("4", "0", "Tetrahedral", "Tetrahedral", "109.5");
+        new GeometryGroup("3", "1", "Tetrahedral", "Trigonal Pyramidal", "<109.5");
+        new GeometryGroup("2", "2", "Tetrahedral", "Bent", "<109.5");
+        new GeometryGroup("5", "0", "Trigonal Bipyramidal", "Trigonal Bipyramidal", "90,120,180");
+        new GeometryGroup("4", "1", "Trigonal Bipyramidal", "Seesaw", "90,120,180");
+        new GeometryGroup("3", "2", "Trigonal Bipyramidal", "T-Shaped", "90,180");
+        new GeometryGroup("2", "3", "Trigonal Bipyramidal", "Linear", "180");
+        new GeometryGroup("6", "0", "Octahedral", "Octahedral", "90,180");
+        new GeometryGroup("5", "1", "Octahedral", "Square Pyramidal", "<90,<180");
+        new GeometryGroup("4", "2", "Octahedral", "Square Planar", "90,180");
+
+        let table = document.querySelector("table");
+        for(let i = 0; i < GeometryGroup.Groups.length; i++){
+            table.innerHTML += GeometryGroup.Groups[i].displayHtml;
+        }
+
+        function bondedChange(){
+            let bondedGroups = document.getElementById("bondedGroups").value;
+            let lonePairs = document.getElementById("lonePairs").value;
+            let rows = document.querySelectorAll("tr");
+            for(let i = 1; i < rows.length; i++){
+                if((rows[i].children[1].innerText == lonePairs || lonePairs == "") && (rows[i].children[0].innerText == bondedGroups || bondedGroups == "")){
+                    rows[i].style.display = "table-row";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+
+        function loneChange(){
+            let bondedGroups = document.getElementById("bondedGroups").value;
+            let lonePairs = document.getElementById("lonePairs").value;
+            let rows = document.querySelectorAll("tr");
+            for(let i = 1; i < rows.length; i++){
+                if((rows[i].children[1].innerText == lonePairs || lonePairs == "") && (rows[i].children[0].innerText == bondedGroups || bondedGroups == "")){
+                    rows[i].style.display = "table-row";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
