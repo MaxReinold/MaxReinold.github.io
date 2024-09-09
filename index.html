@@ -1,177 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Maxwell Reinold</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-CbxgHsIWOblwRV1m2AaHCbZeZbB8bqH4wnVd/SsgZ/ozuv+mVVabppsjTbTfbEObaR5RvlNqPeefjcH5AAvfaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <p>Maxwell Reinold</p>
+        <p><a href="./contact.html">Contact Maxwell</a></p>
+    </nav>
     
-    <head>
-
-        <link rel="stylesheet" type="text/css" href="style.css">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <section class="splash">
+        <h1>Maxwell Reinold</h1>
+        <img src="./images/headshot.jpg" alt="Max's Headshot" height="250px" width="187px"/>
+        <p>
+            162 Ruth Dr. Athens, Georgia 30601 &middot;
+            (678) 687-3297 &middot;
+            <a href="mailto:maxwellreinold@gmail.com">MaxwellReinold@gmail.com</a>
+        </p>
+        <p>Hi I'm Max, I'm primarily a Front-End Web Developer but I have plenty of experience developing fullstack web applications.</p>
+    </section>
+    
+    <hr />
+    
+    <section class="body-content">
+        <section>
+            <h2>Education</h2>
+            <p>
+                UGA 2025 &middot;
+                Computer Science Major &middot;
+                GPA: 3.1 &middot;
+                Web Design, Software Development, Algorithms
+            </p>
+        </section>
         
-        <link rel="shortcut icon" type="image/x-icon" href="Graphics/icon.ico">
+        <section>
+            <h2>Honors and Awards</h2>
+            <dl>
+                <dt>Computer Science Student of the Year</dt>
+                <dd>2019</dd>
+            </dl>
+        </section>
 
-        <title>StealthSV</title>
-        <style>
-			body { margin: 0; }
-
-			#controls {
-				position: absolute;
-				background-color: #1a1625;
-				opacity: 0.9;
-				border-radius: 5px;
-				border: 1.5px solid white;
-				color: #b4aecd;
-				padding: 5px;
-                top: 5px;
-                left: 5px;
-			}
-
-		</style>
-    </head>
-
-    <body>
-        <div id="container">
-            <div id="infoContainer">
-                <div id="infoBlock">
-                    <img id="pfp" src="Graphics/pfp.jpg">
-                    <h2>StealthSV</h2>
-                    <p id="bio"></p>
-                </div>
-                
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>ReactJS</li>
+                <li>Vue3</li>
+                <li>TailwindCSS</li>
+                <li>NodeJS</li>
+                <li>Lua</li>
+                <li>C#</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Leadership and Experience</h2>
+            <dl>
+                <dt>NobleRP Developer Team Lead</dt>
+                <dd>At NobleRP I led a small team of developers to create and maintain a popular FiveM server. I primarily used Lua for the backend part of the resources, with React and Vue for the UI Design.</dd>
+                <dt>Software Engineering</dt>
+                <dd>I was the most experienced developer on my Software Engineering team (Cinema Booking Project listed below) so it was my job to guide the team using the best coding practices. We wrote our app with NodeJS and MySQL on the backend, with React for the front-end. I was primarily the front-end developer but I assisted with database design and back-end setup when needed.</dd>
+            </dl>
+        </section>
+        
+        <section class="three-col">
+            <div class="card">
+                <h3>Cinema Booking</h3>
+                <ul>
+                    <li>Front-end &middot; React</li>
+                    <li>Back-end &middot; NodeJS</li>
+                    <li>Database &middot; MySQL</li>
+                </ul>
             </div>
-
-            <div id="linksContainer">
-
-                <div id="cardContainer"></div>
-
+            
+            <div class="card">
+                <h3>FiveM Server NobleRP</h3>
+                <ul>
+                    <li>UI &middot; React, NextJS, Vue3, HTML, CSS</li>
+                    <li>Back-end &middot; NodeJS</li>
+                    <li>Database &middot; MySQL</li>
+                </ul>
             </div>
-
-            <script src="script.js"></script>
-        </div>
-        <div id="footer">
-            <hr>
-            <div>Website Created by StealthSV (Charles Reinold)</div>
-        </div>
-        <div id="background">
-
-        </div>
-        <div id="controls">
-			<table>
-				<tr>
-					<td><label for="magnitude">Magnitude:</label></td>
-					<td><input id="magnitude" type="range" min=0.1 max=10 step=0.1 value=2></td>
-				</tr>
-				<tr>
-					<td><label for="waveLength">Wave Length:</label></td>
-					<td><input id="waveLength" type="range" min=0.1 max=10 step=0.1 value=5></td>
-				</tr>
-                <tr>
-					<td><label for="waveSpeed">Wave Speed:</label></td>
-					<td><input id="waveSpeed" type="range" min=-5 max=5 step=0.1 value=-1.5></td>
-				</tr>
-				<tr>
-					<td>Free Control:</td>
-					<td><label class="switch">
-						<input type="checkbox" id="fineControl">
-						<span class="slider round"></span>
-					  </label></td>
-				</tr>
-			</table>
-		</div>
-		<script type="module">
-			import * as THREE from 'https://cdn.skypack.dev/three@v0.133.1';
-			import { OrbitControls } from 'https://cdn.skypack.dev/three@v0.133.1/examples/jsm/controls/OrbitControls.js';
-			const loader = new THREE.TextureLoader();
-			const renderer = new THREE.WebGLRenderer();
-			let magnitude = 2;
-			let waveLength = 1/5;
-            let waveSpeed = -1.5;
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.querySelector("#background").appendChild( renderer.domElement );
-
-			document.querySelector("#magnitude").addEventListener("change", magChanged);
-			document.querySelector("#waveLength").addEventListener("change", lenChanged);
-			document.querySelector("#waveSpeed").addEventListener("change", speedChanged);
-			document.querySelector("#fineControl").addEventListener("change", fineChanged);
-
-			function fineChanged(){
-				if(document.querySelector("#fineControl").checked){
-					document.querySelector("#background").style.zIndex = "10";
-				} else {
-					document.querySelector("#background").style.zIndex = "-2";
-				}
-			}
-
-			function magChanged(){
-				magnitude = document.querySelector("#magnitude").value;
-			}
-
-			function lenChanged(){
-				waveLength = 1/document.querySelector("#waveLength").value;
-			}
-
-            function speedChanged() {
-                waveSpeed = document.querySelector("#waveSpeed").value;
-            }
-			const scene = new THREE.Scene();
-
-			const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
-
-			const controls = new OrbitControls( camera, renderer.domElement );
-
-			//controls.update() must be called after any manual changes to the camera's transform
-			camera.position.set( 0, 0, 80);
-			controls.update();
-			const geometry = new THREE.BufferGeometry();
-			const vertices = new Float32Array( [
-				-0.0, -0.0,  0.0,
-			] );
-			geometry.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
-			loader.load('Graphics/circle.png', (texture) =>{
-					const material = new THREE.PointsMaterial( { 
-					color: 0xb4aecd ,
-					size: 0.75,
-					map: texture,
-					opacity: 1.0,
-					transparent: false,
-					alphaTest: 0.5
-				});
-				let cubes = [];
-			for(let x = 0; x < 200; x++){
-				cubes.push([]);
-				for(let y = 0; y < 100; y++){
-					cubes[x].push(new THREE.Points(geometry,  material));
-				}
-			}
-			for(let x = 0; x < cubes.length; x++){
-				for(let y = 0; y < cubes[x].length; y++){
-					scene.add(cubes[x][y]);
-					cubes[x][y].position.x = (x - 0.5*cubes.length);
-					cubes[x][y].position.y = (y - 0.5*cubes[0].length);
-				}
-			}
-			let theta = 0;
-			let newPosition = (modifier)=>{
-				return Math.sin(theta+modifier);
-			}
-			const animate = function () {
-				requestAnimationFrame( animate );
-
-				for(let x = 0; x < cubes.length; x++){
-					for(let y = 0; y < cubes[x].length; y++){
-						cubes[x][y].position.z = (	newPosition(((x-100)**2 + (y-50)**2)*waveLength/50)	)*magnitude;
-					}
-				}
-
-				theta+= Math.PI*waveSpeed/180;
-				renderer.render( scene, camera );
-			};
-
-			animate();
-			})
-			
-		</script>
-    </body>
-
+            
+            <div class="card">
+                <h3>FiveM Server PowerRP</h3>
+                <ul>
+                    <li>UI &middot; HTML, CSS</li>
+                    <li>Back-end &middot; NodeJS</li>
+                    <li>Database &middot; MySQL</li>
+                </ul>
+            </div>
+        </section>
+    </section>
+        
+    <footer>
+        © <a href="index.html">Maxwell Reinold</a> &middot; <a href="https://www.linkedin.com/in/charlesreinold/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+    </footer>
+</body>
 </html>

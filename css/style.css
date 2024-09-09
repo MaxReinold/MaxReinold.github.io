@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 1em;
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 1em;
+    color: white;
+}
+
+.splash {
+    background-color: #f0f0f0;
+    padding: 2em;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    color: #333;
+}
+
+img {
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+section p:nth-of-type(2) {
+    font-style: italic;
+    color: #777;
+}
+
+hr {
+    border: 1px solid #333;
+}
+
+h2 {
+    font-family: 'Lora', serif;
+    font-size: 2em;
+    color: #555;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 40px;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+p, li {
+    font-size: 1.1em;
+}
+
+.three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.one-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+svg {
+    width: 1em;
+}
+
+path {
+    fill: white;
+}
+
+.body-content {
+    width: 786px;
+    margin: auto;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
+footer svg:hover {
+    scale: 1.05;
+}
